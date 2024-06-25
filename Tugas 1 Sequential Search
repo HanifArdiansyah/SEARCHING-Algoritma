@@ -1,0 +1,20 @@
+def pencarian_berurutan(arr, target):
+  
+    for indeks in range(len(arr)):
+        if arr[indeks] == target:
+            return indeks
+    return -1
+
+if __name__ == "__main__":
+   
+    daftar_saya = input("Masukkan angka bebas contoh: 12 13 14 15: ")
+    daftar_saya = list(map(int, daftar_saya.split()))
+   
+    target = int(input("Masukkan angka target yang ingin dicari: "))
+
+    hasil = pencarian_berurutan(daftar_saya, target)
+
+    if hasil != -1:
+        print(f"Elemen ditemukan di indeks {hasil}")
+    else:
+        print("Elemen tidak ditemukan dalam daftar")
